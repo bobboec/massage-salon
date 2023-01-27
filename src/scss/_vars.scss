@@ -1,0 +1,15 @@
+// если вы хотите использовать sass-переменные - удалите root
+// colors
+:root {
+  // base
+  --font-family: "Montserrat", sans-serif;
+  --content-width: 1504px;
+  --container-offset: 15px;
+  --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+
+  // colors
+  --light-color: #fff;
+  --yellow-color: #fbdaa8;
+  --bronze-color: #d8a65d;
+  --dark-color: rgba(0, 0, 0, 0.5);
+}
