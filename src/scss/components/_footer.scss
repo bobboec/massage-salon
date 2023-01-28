@@ -1,0 +1,20 @@
+.footer {
+  margin-bottom: 89px;
+  // .footer__text
+
+  &__text {
+    @include flex-all-center;
+    margin: 0;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;
+    color: var(--light-color);
+    svg {
+      width: 41px;
+      height: 41px;
+      margin-right: 12px;
+      fill: var(--light-color);
+    }
+  }
+}

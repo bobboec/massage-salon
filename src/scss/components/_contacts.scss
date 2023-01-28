@@ -1,0 +1,138 @@
+.contacts {
+  margin-bottom: 60px;
+  // .contacts__cintainer
+
+  &__container {
+  }
+  &__wrapper {
+    display: grid;
+    grid-template-columns: 508px 1fr;
+    grid-template-rows: 523px;
+    gap: 0px 0px;
+    box-shadow: 0px 0px 80px rgba(255, 158, 68, 0.37);
+    border-radius: 15px;
+  }
+  // .contacts__content
+
+  &__content {
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  // .contacts__title
+
+  &__title {
+    margin: 0;
+    margin-bottom: 50px;
+  }
+
+  // .contacts__phone
+
+  &__phone {
+    margin-bottom: 15px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 50px;
+    color: var(--light-color);
+    transition: font-size 0.3s ease 0s;
+    @media (any-hover: hover) {
+      &:hover {
+        font-size: 38px;
+      }
+    }
+  }
+
+  // .contacts__mail
+
+  &__mail {
+    margin-bottom: 37px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 50px;
+    color: var(--light-color);
+    transition: font-size 0.3s ease 0s;
+    @media (any-hover: hover) {
+      &:hover {
+        font-size: 38px;
+      }
+    }
+  }
+
+  // .contacts__adress
+
+  &__adress {
+    margin-bottom: 65px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 33px;
+    color: var(--light-color);
+    transition: font-size 0.3s ease 0s;
+    @media (any-hover: hover) {
+      &:hover {
+        font-size: 26px;
+      }
+    }
+  }
+
+  // .contacts__map
+
+  &__map {
+    ymaps {
+      border-radius: 15px;
+    }
+  }
+}
+.social {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  // .social__item
+
+  &__item {
+    width: 62px;
+    height: 62px;
+    border-radius: 62px;
+    background-color: #3f3b36;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+  }
+
+  // .social__link
+
+  &__link {
+    @include flex-all-center;
+    svg {
+      width: 33px;
+      height: 33px;
+      fill: var(--yellow-color);
+    }
+  }
+
+  // .social__link--wapp
+
+  &__link--wapp {
+  }
+
+  // .social__link--inst
+
+  &__link--inst {
+  }
+
+  // .social__link--vk
+
+  &__link--vk {
+  }
+
+  // .social__link--tg
+
+  &__link--tg {
+  }
+}

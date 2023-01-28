@@ -1,0 +1,146 @@
+.masters {
+  background: radial-gradient(70% 35%, rgba(255, 158, 68, 0.15), #0c0c0d);
+  margin-bottom: 86px;
+  // .masters__container
+
+  &__container {
+  }
+
+  // .masters__title
+
+  &__title {
+    margin-bottom: 80px;
+  }
+
+  // .masters__list
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 60px;
+    grid-row-gap: 62px;
+  }
+
+  // .masters__item
+
+  &__item {
+    position: relative;
+    width: 448px;
+    height: 491px;
+    @media (any-hover: hover) {
+      &:hover {
+        .masters__content {
+          background: linear-gradient(
+            180deg,
+            rgba(0, 0, 0, 0) 70.97%,
+            rgba(0, 0, 0, 0.510624) 80.42%,
+            rgba(249, 203, 119, 0.842) 90.56%,
+            #d8a65d 98.26%
+          );
+        }
+        .masters__parameters {
+          transform: translateY(-20px);
+        }
+      }
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0px;
+        left: -2px;
+        right: -2px;
+        bottom: -2px;
+        background: linear-gradient(
+          rgba(216, 166, 93, 0%),
+          var(--bronze-color)
+        );
+        border-radius: 15px;
+        z-index: 1;
+      }
+    }
+  }
+  // .masters__image
+
+  &__image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 5;
+  }
+
+  // .masters__content
+
+  &__content {
+    margin: 0;
+    padding: 52px 24px 52px 24px;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0) 26.97%,
+      rgba(0, 0, 0, 0.510624) 46.42%,
+      rgba(0, 0, 0, 0.841941) 65.56%,
+      #000000 98.26%
+    );
+    border-radius: 15px;
+  }
+
+  // .masters__name
+
+  &__name {
+    margin: 0;
+    font-family: "Vollkorn";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 100%;
+    color: var(--light-color);
+  }
+
+  // .masters__parameters
+
+  &__parameters {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: all 0.3s ease 0s;
+  }
+
+  &__vital {
+    font-family: "Cormorant";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 114.8%;
+
+    color: var(--light-color);
+  }
+
+  &__like {
+    position: absolute;
+    width: 52px;
+    height: 44px;
+    bottom: -21px;
+    left: 50%;
+    z-index: 20;
+    stroke: var(--bronze-color);
+    transform: translateX(-50%);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    @media (any-hover: hover) {
+      &:hover {
+        fill: var(--bronze-color);
+      }
+    }
+  }
+}

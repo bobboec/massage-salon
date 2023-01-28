@@ -1,0 +1,25 @@
+.btn {
+  font-family: "Lato";
+  margin: 0;
+  padding: 0;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 23px;
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: var(--yellow-color);
+  background: var(--dark-color);
+  border: 2px solid var(--bronze-color);
+  opacity: 0.9;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn {
+  @media (any-hover: hover) {
+    &:hover {
+      background: linear-gradient(90deg, var(--dark-color), grey);
+    }
+  }
+}

@@ -1,5 +1,5 @@
 .hero {
-  background: url("../img/main-bg.jpg") 0 0 no-repeat;
+  background: url("/img/main-bg.jpg") 0 0 no-repeat;
   height: 100vh;
   min-height: 970px;
 
@@ -27,7 +27,7 @@
     margin: 0;
     margin-bottom: 1.5rem;
     max-width: 630px;
-    font-family: "Philosopher", sans-serif;
+    font-family: "Vollkorn";
     font-style: normal;
     font-weight: 500;
     font-size: 80px;
@@ -41,7 +41,7 @@
   &__subtitle {
     margin: 0;
     margin-bottom: 4.6rem;
-    font-family: "Philosopher", sans-serif;
+    font-family: "Cormorant", sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 32px;
@@ -53,14 +53,10 @@
   // .hero__action
 
   &__action {
-    width: 281px;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 23px 46px;
-    background: var(--dark-color);
-    color: var(--yellow-color);
-    border: 2px solid var(--bronze-color);
     box-shadow: 0px 0px 48px rgba(255, 158, 68, 0.37);
     backdrop-filter: blur(24.5px);
     border-radius: 30px;

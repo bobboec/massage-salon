@@ -1,9 +1,42 @@
 .header {
-  position: fixed;
+  position: absolute;
+  width: 100%;
   top: 0;
   left: 0;
-  width: 100%;
   min-height: 101px;
+
+  &__wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    transition: all 0.3s ease 0s;
+  }
+
+  &._scroll {
+    .header__wrapper {
+      background-color: rgba(0, 0, 0, 0.35);
+      backdrop-filter: blur(30px);
+      min-height: 80px;
+      .nav__list {
+        background-color: transparent;
+        backdrop-filter: none;
+        min-height: 80px;
+      }
+
+      @media (any-hover: hover) {
+        &:hover {
+          background-color: var(--dark-color);
+        }
+      }
+
+      .header__body {
+        transition: all 0.3s ease 0s;
+        min-height: 50px;
+      }
+    }
+  }
   // .header__container
 
   &__container {
@@ -15,6 +48,9 @@
   // .header__contacts
 
   &__contacts {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
   }
 
   // .header__phone
@@ -25,26 +61,77 @@
   // .header__adress
 
   &__adress {
+    font-family: "Vollkorn";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 28px;
+    color: var(--light-color);
   }
 }
 
 .logo {
+  margin-top: 10px;
 }
 .nav {
   // .nav__list
 
   &__list {
+    min-height: 101px;
+    max-width: 900px;
+    padding: 0px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background: rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(30px);
+    border-radius: 0px 0px 15px 15px;
   }
 
   // .nav__item
 
   &__item {
+    margin: 12px 31px;
   }
 
   // .nav__link
 
   &__link {
+    font-family: "Lato";
+    position: relative;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 26px;
+    color: var(--light-color);
+    text-decoration: none;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 3px;
+      border-radius: 4px;
+      background-color: var(--light-color);
+      bottom: -2px;
+      left: 0;
+      transform-origin: right;
+      transform: scaleX(0);
+      transition: transform 0.3s ease-in-out;
+    }
+    @media (any-hover: hover) {
+      &::before {
+        transform-origin: left;
+        transform: scaleX(1);
+      }
+    }
   }
 }
 .phone {
+  font-family: "Vollkorn";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 36px;
+  color: var(--light-color);
 }
