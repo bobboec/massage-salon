@@ -11,4 +11,20 @@ window.onload = function () {
 
   const headerObserver = new IntersectionObserver(callback);
   headerObserver.observe(headerElement);
+
+  //  перемещение контактов в ul
+  const contacts = document.querySelector('.header__contacts')
+  const mobileMenu = document.querySelector('[data-menu]')
+  const bigMenu = document.querySelector('.header__container')
+  window.addEventListener("resize", function () {
+    if (document.documentElement.clientWidth <= 1024) {
+      mobileMenu.appendChild(contacts)
+    } else if (document.documentElement.clientWidth > 1024) {
+      bigMenu.appendChild(contacts)
+
+    }
+  });
+
+
+
 }
