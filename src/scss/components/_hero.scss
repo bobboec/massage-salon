@@ -1,11 +1,11 @@
 .hero {
-  background: url("/img/main-bg.jpg") 0 0 no-repeat;
+  background: url("../img/main-bg.jpg") 0 0 no-repeat;
   height: 100vh;
   min-height: 970px;
   max-height: 1080px;
   @include mobile {
     min-height: 768px;
-    background: url("/img/main-bg.jpg") 50% 0 no-repeat;
+    background: url("../img/main-bg.jpg") 50% 0 no-repeat;
   }
 
   // .hero__container
