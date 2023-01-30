@@ -6,4 +6,7 @@
   line-height: 100%;
   text-align: center;
   color: var(--yellow-color);
+  @include mobile {
+    font-size: 32px;
+  }
 }

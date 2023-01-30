@@ -8,9 +8,9 @@ function init() {
     zoom: 13
   });
 
-  myMap.controls.add(
-    new ymaps.control.ZoomControl()
-  );
+  // myMap.controls.add(
+  //   new ymaps.control.ZoomControl()
+  // );
 
   myPlacemark = new ymaps.Placemark([56.30559241544732, 43.99135228650556], {}, {
     // Опции.

@@ -12,8 +12,21 @@
   background: var(--dark-color);
   border: 2px solid var(--bronze-color);
   opacity: 0.9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 23px 46px;
+  box-shadow: 0px 0px 48px rgba(255, 158, 68, 0.37);
+  backdrop-filter: blur(24.5px);
+  border-radius: 30px;
+  @include mobile {
+    padding: 16px 36px;
+  }
   cursor: pointer;
   transition: all 0.3s;
+  @include mobile {
+    font-size: 14px;
+  }
 }
 
 .btn {

@@ -6,7 +6,8 @@ const rules = [{
     rules: [{
         rule: 'minLength',
         color: 'white',
-        value: 3
+        value: 3,
+        errorMessage: 'Имя должно содержать минимум 3 символа'
       },
       {
         rule: 'required',
@@ -14,21 +15,6 @@ const rules = [{
         errorMessage: 'Заполните имя!'
       }
     ]
-  },
-  {
-    ruleSelector: '.input-email',
-    rules: [{
-        rule: 'minLength',
-        value: 3,
-        errorMessage: 'Минимум 3 символа',
-
-      },
-      {
-        rule: 'email',
-        value: true,
-        errorMessage: 'Заполните корректный email',
-      }
-    ],
   },
   {
     ruleSelector: '.input-tel',

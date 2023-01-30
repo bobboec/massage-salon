@@ -6,7 +6,8 @@ import { enableScroll } from '../functions/enable-scroll';
   const menu = document?.querySelector('[data-menu]');
   const menuItems = document?.querySelectorAll('[data-menu-item]');
   const overlay = document?.querySelector('[data-menu-overlay]');
-  
+  const headerContacts = document?.querySelector('.header__contacts');
+
 
   burger?.addEventListener('click', (e) => {
     burger?.classList.toggle('burger--active');

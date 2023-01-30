@@ -19,6 +19,9 @@
     flex-wrap: wrap;
     align-items: flex-start;
     justify-content: space-between;
+    @include tablet {
+      justify-content: center;
+    }
   }
 
   // .programs__item
@@ -31,6 +34,10 @@
     transition: all 0.3s ease 0s;
     &:hover {
       transform: translateY(-12px);
+    }
+    @include tablet {
+      margin: 0px 20px 60px 20px;
+      max-width: 390px;
     }
   }
   &__image {
@@ -71,6 +78,9 @@
     font-size: 36px;
     line-height: 100%;
     color: var(--light-color);
+    @include mobile {
+      font-size: 30px;
+    }
   }
 
   // .programs__text
@@ -93,6 +103,7 @@
     display: flex;
     align-items: flex-start;
     justify-content: start;
+    flex-wrap: wrap;
   }
 
   // .programs__time

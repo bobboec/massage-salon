@@ -20,43 +20,51 @@
     grid-template-rows: repeat(2, 1fr);
     grid-column-gap: 60px;
     grid-row-gap: 62px;
+    @include tablet {
+      grid-template-columns: repeat(2, 1fr);
+      justify-items: center;
+    }
+    @include small-tablet {
+      grid-template-columns: repeat(1, 1fr);
+      justify-items: center;
+    }
   }
 
   // .masters__item
 
   &__item {
     position: relative;
-    width: 448px;
+    max-width: 448px;
     height: 491px;
-    @media (any-hover: hover) {
-      &:hover {
-        .masters__content {
-          background: linear-gradient(
-            180deg,
-            rgba(0, 0, 0, 0) 70.97%,
-            rgba(0, 0, 0, 0.510624) 80.42%,
-            rgba(249, 203, 119, 0.842) 90.56%,
-            #d8a65d 98.26%
-          );
-        }
-        .masters__parameters {
-          transform: translateY(-20px);
-        }
-      }
-      &::before {
-        content: "";
-        position: absolute;
-        top: 0px;
-        left: -2px;
-        right: -2px;
-        bottom: -2px;
+    min-height: 400px;
+
+    &:hover {
+      .masters__content {
         background: linear-gradient(
-          rgba(216, 166, 93, 0%),
-          var(--bronze-color)
+          180deg,
+          rgba(0, 0, 0, 0) 70.97%,
+          rgba(0, 0, 0, 0.510624) 80.42%,
+          rgba(249, 203, 119, 0.842) 90.56%,
+          #d8a65d 98.26%
         );
-        border-radius: 15px;
-        z-index: 1;
       }
+      .masters__parameters {
+        transform: translateY(-20px);
+      }
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0px;
+      left: -2px;
+      right: -2px;
+      bottom: -2px;
+      background: linear-gradient(rgba(216, 166, 93, 0%), var(--bronze-color));
+      border-radius: 15px;
+      z-index: 1;
+    }
+    @include tablet {
+      width: 300px;
     }
   }
   // .masters__image
@@ -68,6 +76,7 @@
     top: 0;
     left: 0;
     z-index: 5;
+    border-radius: 15px;
   }
 
   // .masters__content
@@ -104,6 +113,9 @@
     font-size: 36px;
     line-height: 100%;
     color: var(--light-color);
+    @include mobile {
+      font-size: 24px;
+    }
   }
 
   // .masters__parameters
@@ -124,6 +136,9 @@
     line-height: 114.8%;
 
     color: var(--light-color);
+    @include mobile {
+      font-size: 16px;
+    }
   }
 
   &__like {
@@ -136,7 +151,6 @@
     stroke: var(--bronze-color);
     transform: translateX(-50%);
     transition: all 0.3s ease 0s;
-    cursor: pointer;
     @media (any-hover: hover) {
       &:hover {
         fill: var(--bronze-color);
